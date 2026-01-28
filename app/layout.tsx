@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import Navbar from "@/components/navbar";
 import Header from "@/components/header";
+import CoverParticles from "@/components/cover-particles";
 
 //Tipografía Urbanist en el portfolio
 const urbanist = Urbanist({
@@ -24,9 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={urbanist.className}
-      >
+      <body className={`${urbanist.className} bg-gradient-cover`}>
+        <CoverParticles />
         <Navbar />
         <Header />
         {children}

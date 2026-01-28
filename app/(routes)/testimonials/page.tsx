@@ -7,13 +7,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { dataTestimonials } from "@/data";
 import CircleImage from "@/components/circle-image";
 import TransitionPage from "@/components/transition-page";
-import CoverParticles from "@/components/cover-particles";
 
 const TestimonialsPage = () => {
   return (
     <>
       <TransitionPage />
-      <CoverParticles />
       <div className="flex flex-col justify-center h-lvh">
         <CircleImage />
         <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-5">

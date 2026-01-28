@@ -5,13 +5,12 @@ import ContainerPage from "@/components/container";
 import Avatar from "@/components/avatar";
 import CounterServices from "@/components/counter-services";
 import TimeLine from "@/components/time-line";
-import CoverParticles from "@/components/cover-particles";
 
 const AboutMePage = () => {
   return (
     <>
       <TransitionPage />
-      <CoverParticles />
+
       <ContainerPage>
         <Avatar />
         <h1 className="text-2xl leading-tight text-center md:text-left md:text-5xl md:mt-10">
