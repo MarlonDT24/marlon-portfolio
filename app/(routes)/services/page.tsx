@@ -1,5 +1,6 @@
 import AvatarServices from "@/components/avatar-services";
 import CircleImage from "@/components/circle-image";
+import CoverParticles from "@/components/cover-particles";
 import SliderServices from "@/components/slider-services";
 import TransitionPage from "@/components/transition-page";
 
@@ -7,6 +8,7 @@ export default function ServicesPage() {
   return (
     <>
       <TransitionPage />
+      <CoverParticles />
       <CircleImage />
       <AvatarServices />
       <div className="grid items-center justify-center h-screen max-w-4xl gap-6 mx-auto md:grid-cols-2">
