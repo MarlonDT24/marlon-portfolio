@@ -19,7 +19,7 @@ const Navbar = () => {
             <div
               key={item.id}
               className={`px-3 py-2 transition duration-150
-                rounded-full cursos-pointer hover:bg-green-800 ${router === item.link && "bg-green-800"}`}
+                rounded-full cursos-pointer hover:bg-green-700 ${router === item.link && "bg-green-700"}`}
             >
               <Link href={item.link}>{item.icon}</Link>
             </div>
