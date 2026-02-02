@@ -1,30 +1,26 @@
-import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin, Twitter, Rss, Twitch, Youtube, Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+import { BookText, MailPlus, CodeSquare, HomeIcon, UserRound, Linkedin, Crop, Pencil, Computer, Book, Rocket, Speech, Github } from "lucide-react";
+import { PiWhatsappLogoThin } from "react-icons/pi";
 
 export const socialNetworks = [
     {
         id: 1,
-        logo: <Youtube size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <Github size={30} strokeWidth={1} />,
+        src: "https://github.com/MarlonDT24",
     },
     {
         id: 2,
         logo: <Linkedin size={30} strokeWidth={1} />,
-        src: "#!",
+        src: "https://www.linkedin.com/in/marlon-torres-982a17305/",
     },
     {
         id: 3,
-        logo: <Twitter size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <MailPlus size={30} strokeWidth={1} />,
+        src: "mailto:torresmarlon40@gmail.com?subject=Contacto%20desde%20Portfolio",
     },
     {
         id: 4,
-        logo: <Rss size={30} strokeWidth={1} />,
-        src: "#!",
-    },
-    {
-        id: 5,
-        logo: <Twitch size={30} strokeWidth={1} />,
-        src: "#!",
+        logo: <PiWhatsappLogoThin size={33} strokeWidth={1} />,
+        src: "https://wa.me/34600000000?text=Hola%20Marlon,%20vi%20tu%20portfolio...",
     },
 ];
 
