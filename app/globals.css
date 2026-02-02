@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-secondary: #f5741c;
+  --color-secondary: #00d1ff;
   --color-darkBg: #0b0d0f;
 
   --background-image-gradient-cover: linear-gradient(
     180deg,
     #0b0d0f 10%,
     #0b0d0f 40%,
-    #32CD37 100%
+    #239e29 100%
   );
 }
 html,
@@ -75,7 +75,8 @@ main {
 
 /* Animación de morphing para blob */
 @keyframes blob {
-  0%, 100% {
+  0%,
+  100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
   50% {
@@ -85,7 +86,8 @@ main {
 
 /* Animación de flotación para partículas */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
