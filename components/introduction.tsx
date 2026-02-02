@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import ContactManager from "./contact-manager";
+import { ArrowRight  } from "lucide-react";
 
 const Introduction = () => {
   return (
@@ -75,10 +76,16 @@ const Introduction = () => {
           <div className="flex items-center justify-center gap-3 md:justify-start md:gap-10">
             <Link
               href="/portfolio"
-              className="px-3 py-2 transition-all border-2 cursor-pointer text-md w-fit rounded-xl
-               hover:shadow-xl hover:shadow-white/50"
+              className="relative px-5 py-2.5 text-md font-medium text-white transition-all duration-300 
+             border-2 border-white rounded-full hover:bg-white/30 overflow-hidden group w-fit"
             >
-              Ver Proyectos
+              {/* Fondo que se desliza al hacer hover */}
+              <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+
+              <span className="relative flex items-center gap-2">
+                Ver Proyectos
+                <ArrowRight />
+              </span>
             </Link>
             <ContactManager />
           </div>
