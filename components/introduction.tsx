@@ -73,7 +73,7 @@ const Introduction = () => {
             arquitectura completa del sistema.
           </p>
 
-          <div className="flex items-center justify-center gap-3 md:justify-start md:gap-10">
+          <div className="flex items-center justify-center gap-3 md:justify-center md:gap-10">
             <Link
               href="/portfolio"
               className="relative px-5 py-2.5 text-md font-medium text-white transition-all duration-300 
