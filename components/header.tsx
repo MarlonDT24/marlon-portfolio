@@ -1,8 +1,9 @@
 import Link from "next/link";
 import MotionTransition from "./transition-component";
 import { socialNetworks } from "@/data";
+import CvSelector from "./cv-selector";
 
-const Header = () => {
+export default function Header() {
   return (
     <MotionTransition
       position="bottom"
@@ -16,6 +17,9 @@ const Header = () => {
               <span className="text-green-500">dev</span>
             </h1>
           </Link>
+          <div className="hidden md:block">
+             <CvSelector />
+          </div>
           <div className="flex items-center justify-center gap-7">
             {socialNetworks.map(({ logo, src, id }) => (
               <Link
@@ -27,11 +31,14 @@ const Header = () => {
                 {logo}
               </Link>
             ))}
+            {/* 2. CV EN MOBILE (Icono integrado) - Visible solo en móvil (md:hidden) */}
+            <div className="md:hidden flex items-center">
+                <CvSelector isMobile={true} />
+            </div>
           </div>
         </div>
       </header>
     </MotionTransition>
   );
-};
 
-export default Header;
+}
