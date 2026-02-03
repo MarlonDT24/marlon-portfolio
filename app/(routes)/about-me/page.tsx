@@ -2,9 +2,8 @@
 
 import TransitionPage from "@/components/transition-page";
 import ContainerPage from "@/components/container";
-import Avatar from "@/components/avatar";
-import CounterServices from "@/components/counter-services";
-import TimeLine from "@/components/time-line";
+import CounterServices from "@/app/(routes)/services/components/counter-services";
+import TimeLine from "@/app/(routes)/about-me/components/time-line";
 import BentoSkills from "./components/bento-skills";
 
 export default function AboutMePage() {
@@ -13,7 +12,6 @@ export default function AboutMePage() {
       <TransitionPage />
 
       <ContainerPage>
-        <Avatar />
         <h1 className="text-2xl leading-tight text-center md:text-left md:text-5xl md:mt-10">
           Toda mi{" "}
           <span className="font-bold text-green-500">
@@ -35,7 +33,7 @@ export default function AboutMePage() {
 
           {/* COMPETENCIAS: Ocupa 5 de 12 columnas. En pantallas grandes es vertical (Sticky) */}
           <div className="xl:col-span-5 order-1 xl:order-2">
-            <div className="xl:sticky xl:top-24">
+            <div className=" xl:top-24">
               <h2 className="text-2xl font-bold mb-6 text-center md:text-center">
                     Competencias <span className="text-secondary">Técnicas</span>
                 </h2>

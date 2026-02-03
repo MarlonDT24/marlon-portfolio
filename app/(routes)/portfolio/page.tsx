@@ -1,12 +1,12 @@
 import { dataPortfolio } from "@/data";
 
-import AvatarPortfolio from "@/components/avatar-portfolio";
+import AvatarPortfolio from "@/app/(routes)/portfolio/components/avatar-portfolio";
 import CircleImage from "@/components/circle-image";
 import TransitionPage from "@/components/transition-page";
 import ContainerPage from "@/components/container";
-import PortfolioBox from "@/components/portfolio-box";
+import PortfolioBox from "@/app/(routes)/portfolio/components/portfolio-box";
 
-const PortfolioPage = () => {
+export default function PortfolioPage() {
   return (
     <ContainerPage>
       <TransitionPage />
@@ -26,6 +26,4 @@ const PortfolioPage = () => {
       </div>
     </ContainerPage>
   );
-};
-
-export default PortfolioPage;
+}

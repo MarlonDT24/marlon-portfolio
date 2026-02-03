@@ -1,6 +1,6 @@
-import AvatarServices from "@/components/avatar-services";
+import AvatarServices from "@/app/(routes)/services/components/avatar-services";
 import CircleImage from "@/components/circle-image";
-import SliderServices from "@/components/slider-services";
+import SliderServices from "@/app/(routes)/services/components/slider-services";
 import TransitionPage from "@/components/transition-page";
 
 export default function ServicesPage() {

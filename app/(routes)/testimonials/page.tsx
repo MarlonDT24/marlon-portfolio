@@ -8,7 +8,7 @@ import { dataTestimonials } from "@/data";
 import CircleImage from "@/components/circle-image";
 import TransitionPage from "@/components/transition-page";
 
-const TestimonialsPage = () => {
+export default function TestimonialsPage() {
   return (
     <>
       <TransitionPage />
@@ -57,5 +57,3 @@ const TestimonialsPage = () => {
     </>
   );
 };
-
-export default TestimonialsPage;
