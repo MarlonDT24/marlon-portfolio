@@ -2,7 +2,7 @@ interface ContainerProps {
   children: React.ReactNode;
 }
 
-const ContainerPage = (props: ContainerProps) => {
+export default function ContainerPage(props: ContainerProps) {
     const { children } = props;
     
     return (
@@ -11,5 +11,3 @@ const ContainerPage = (props: ContainerProps) => {
         </div>
     );
 };
-
-export default ContainerPage;

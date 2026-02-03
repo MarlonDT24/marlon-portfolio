@@ -6,7 +6,7 @@ import Link from "next/link";
 import ContactManager from "./contact-manager";
 import { ArrowRight  } from "lucide-react";
 
-const Introduction = () => {
+export default function Introduction() {
   return (
     <div className="z-20 w-full ">
       <div className="z-20 grid items-center h-full p-6 py-30 md:py-0 md:grid-cols-2 max-w-7xl mx-auto gap-8 lg:gap-12">
@@ -94,5 +94,3 @@ const Introduction = () => {
     </div>
   );
 };
-
-export default Introduction;

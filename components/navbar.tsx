@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import MotionTransition from "./transition-component";
 import Link from "next/link";
 
-const Navbar = () => {
+export default function Navbar() {
   const router = usePathname();
 
   return (
@@ -29,5 +29,3 @@ const Navbar = () => {
     </MotionTransition>
   );
 };
-
-export default Navbar;

@@ -9,7 +9,7 @@ interface MotionTransitionProps {
   className?: string;
 }
 
-const MotionTransition = (props: MotionTransitionProps) => {
+export default function MotionTransition(props: MotionTransitionProps) {
   const { children, position, className } = props;
   return (
     <motion.div
@@ -23,5 +23,3 @@ const MotionTransition = (props: MotionTransitionProps) => {
     </motion.div>
   );
 };
-
-export default MotionTransition;
