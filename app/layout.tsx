@@ -17,16 +17,16 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   title: "Marlon Portfolio | Fullstack Developer",
   description: "Desarrollador Fullstack especializado en Next.js, React y soluciones web escalables. Transformando ideas en código eficiente.",
-  metadataBase: new URL("https://marlondev.com"),
+  metadataBase: new URL("https://marlondev-portfolio.vercel.app"),
   authors: [{ name: "Marlon Torres", url: "https://github.com/MarlonDT24" }],
   openGraph: {
     title: "Marlon Torres | Fullstack Developer",
     description: "Transformando ideas en código eficiente. Mira mis proyectos, trayectoria y testimonios.",
-    url: "https://marlondev.com", // Tu dominio real
+    url: "https://marlondev-portfolio.vercel.app",
     siteName: "MarlonDev",
     images: [
       {
-        url: "/opengraph-image.png", // Crea una imagen de 1200x630px y ponla en public
+        url: "/opengraph-image.png", // Imagen de 1200x630px para Open Graph
         width: 1200,
         height: 630,
         alt: "Marlon Torres Portfolio Preview",
@@ -48,7 +48,7 @@ export default function RootLayout({
         <CoverParticles />
         <Navbar />
         <Header />
-        
+
         {children}
 
         <SpeedInsights />
