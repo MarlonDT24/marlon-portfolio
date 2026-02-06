@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react"; 
-import { Github, Globe, ArrowUpRight } from "lucide-react";
+import { Github, Globe, ArrowUpRight, Lock } from "lucide-react";
 import { ReactNode } from "react";
 
 interface TechItem {
@@ -54,22 +54,39 @@ export default function PortfolioBox(props: PortfolioBoxProps) {
 
                 {/* Overlay de botones (Visible en Hover) */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-10">
-                    <Link
-                        href={urlGithub}
-                        target="_blank"
-                        className="p-3 bg-slate-800 rounded-full text-white hover:bg-white hover:text-black transition-colors transform hover:scale-105 shadow-md"
-                        title="Ver Repositorio"
-                    >
-                        <Github size={22} />
-                    </Link>
-                    <Link
-                        href={urlDemo}
-                        target="_blank"
-                        className="p-3 bg-emerald-600 rounded-full text-white hover:bg-emerald-400 transition-colors transform hover:scale-105 shadow-md"
-                        title="Ver Demo Live"
-                    >
-                        <Globe size={22} />
-                    </Link>
+                    {urlGithub === "#private" ? (
+                        <div 
+                            className="p-3 bg-gray-800/80 rounded-full text-gray-400 border border-white/10"
+                            title="Código Privado (Enterprise NDA)"
+                        >
+                            <Lock size={22} />
+                        </div>
+                    ) : (
+                        <Link
+                            href={urlGithub}
+                            target="_blank"
+                            className="p-3 bg-slate-800 rounded-full text-white hover:bg-white hover:text-black transition-colors transform hover:scale-105 shadow-md"
+                            title="Ver Repositorio"
+                            // Evita que el click abra el modal (stopPropagation)
+                            onClick={(e) => e.stopPropagation()} 
+                        >
+                            <Github size={22} />
+                        </Link>
+                    )}
+
+                    {/* LÓGICA DEL BOTÓN DEMO */}
+                    {/* Si urlDemo es "#!" asumimos que no hay live link directo, ocultamos o mostramos algo distinto */}
+                    {urlDemo !== "#!" && (
+                        <Link
+                            href={urlDemo}
+                            target="_blank"
+                            className="p-3 bg-emerald-600 rounded-full text-white hover:bg-emerald-400 transition-colors transform hover:scale-105 shadow-md"
+                            title="Ver Demo Live"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <Globe size={22} />
+                        </Link>
+                    )}
                 </div>
             </div>
 
