@@ -7,6 +7,12 @@ export async function POST(req: Request) {
   try {
     const data = await req.json();
 
+    if (data.gotcha && data.gotcha.length > 0) {
+        console.log("🚫 Bot detectado y bloqueado (Honeypot trap).");
+        // Devolvemos éxito falso para engañar al bot
+        return NextResponse.json({ success: true }); 
+    }
+
     // Validación básica en servidor
     if (!data.username || !data.email || !data.message) {
         return NextResponse.json({ error: "Faltan campos obligatorios" }, { status: 400 });
@@ -15,7 +21,7 @@ export async function POST(req: Request) {
     // Envío del email
     const emailResponse = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>", // Remitente por defecto si no tienes dominio propio
-      to: ["torresmarlon40@gmail.com"], // <--- AQUÍ LLEGARÁN LOS CORREOS
+      to: ["torresmarlon40@gmail.com"],
       subject: `Nuevo mensaje de ${data.username} - Portfolio`,
       html: `
         <div style="font-family: sans-serif; color: #333;">
