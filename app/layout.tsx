@@ -7,6 +7,7 @@ import "swiper/css/scrollbar";
 import Navbar from "@/components/navbar";
 import Header from "@/components/header";
 import CoverParticles from "@/components/cover-particles";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 //Tipografía Urbanist en el portfolio
 const urbanist = Urbanist({
@@ -47,7 +48,10 @@ export default function RootLayout({
         <CoverParticles />
         <Navbar />
         <Header />
+        
         {children}
+
+        <SpeedInsights />
       </body>
     </html>
   );
