@@ -71,7 +71,7 @@ export default function ContactManager() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="px-5 py-2.5 text-md font-medium bg-green-800 text-white transition-all border-2 border-green-500 rounded-full hover:bg-green-500/80 hover:text-white shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)]"
+        className="px-5 py-2.5 text-md font-medium bg-green-800 text-white transition-all border-2 border-green-600 rounded-full hover:bg-green-500/70 hover:text-white shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)]"
       >
         Contacta Conmigo
       </button>

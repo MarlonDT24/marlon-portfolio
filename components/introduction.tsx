@@ -34,7 +34,7 @@ export default function Introduction() {
         </div>
         <div className="flex flex-col justify-center max-w-2xl">
           <h1 className="mb-3 text-4xl font-bold text-center md:text-left md:text-6xl lg:text-7xl">
-            Soy Marlon Torres
+            Soy <span className="text-green-500">Marlon Torres</span>
           </h1>
           <p className="mb-4 text-md text-center text-gray-300 md:text-left md:text-xl lg:text-2xl">
             Fullstack Developer | React & Next.js Specialist | Mobile Developer
