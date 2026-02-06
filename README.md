@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👨‍💻 Marlon Torres | Fullstack Developer Portfolio
 
-## Getting Started
+Este repositorio aloja el código fuente de mi portafolio profesional. Diseñado no solo para mostrar mi trabajo, sino para demostrar dominio técnico sobre el ecosistema moderno de React y Next.js en 2025.
 
-First, run the development server:
+🔗 **Live Demo:** [https://marlon-portfolio.vercel.app](https://marlon-portfolio.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ⚡ Tech Stack & Características
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El proyecto está construido sobre una arquitectura escalable, utilizando las últimas versiones estables y experimentales del stack:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Core:** [Next.js 16](https://nextjs.org/) (App Router) & [React 19](https://react.dev/).
+* **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) (Motor Oxide, variables CSS nativas y directiva `@theme`).
+* **Lenguaje:** TypeScript en modo estricto para un tipado robusto.
+* **Animaciones:** `motion` (Framer Motion) para transiciones de página, scroll-linked animations y micro-interacciones.
+* **Formularios:** React Hook Form + Zod para validación de esquemas.
+* **Email:** Integración con Resend API.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Detalles de Ingeniería
 
-## Learn More
+### UX/UI Avanzada
+* **Sticky Card Stacking:** Implementación personalizada en la sección de testimonios usando `useScroll` y `useTransform`.
+* **Bento Grid Híbrido:** Layout responsivo que cambia de slider (móvil) a grid estático (desktop) en la sección de Skills.
+* **Navegación Dock:** Barra de navegación flotante estilo macOS optimizada para pulgares en móvil.
 
-To learn more about Next.js, take a look at the following resources:
+### Seguridad y Performance
+* **Honeypot Anti-Spam:** Implementación de campo trampa invisible en el formulario de contacto para filtrar bots sin necesidad de Captchas intrusivos.
+* **Optimización de Recursos:** Carga diferida de partículas (`tsparticles`), fuentes optimizadas (`next/font`) y metadata dinámica para SEO.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Instalación y Despliegue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/MarlonDT24/marlon-portfolio.git](https://github.com/MarlonDT24/marlon-portfolio.git)
+    cd marlon-portfolio
+    ```
 
-## Deploy on Vercel
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Configurar variables de entorno:**
+    Crea un archivo `.env.local` y añade tu clave de API para el envío de correos:
+    ```bash
+    RESEND_API_KEY=re_tu_clave_aqui
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Correr en local:**
+    ```bash
+    npm run dev
+    ```
+
+## 📂 Estructura del Proyecto
+
+```text
+/app          # App Router (Rutas, Layouts, API)
+/components   # Componentes UI (Smart & Dumb components)
+/data         # Datos estáticos separados de la lógica
+/utils        # Utilidades y variantes de animación
