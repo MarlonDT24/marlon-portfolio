@@ -18,8 +18,11 @@ import {
   Database,
   Cpu,
   Globe,
-  Layers,
-  GitBranch,
+  Briefcase,
+  Users,
+  Layout,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 import {
   SiNextdotjs,
@@ -27,7 +30,7 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiOpenai,
-  SiGoogle, // Usaremos Google para Gemini por ahora
+  SiGoogle,
   SiFlutter,
   SiKotlin,
   SiNodedotjs,
@@ -56,6 +59,7 @@ import {
   SiFigma,
   SiNotion,
   SiEclipseide,
+  SiStripe,
 } from "react-icons/si";
 import { FaAws, FaJava, FaVuejs } from "react-icons/fa";
 import { PiWhatsappLogoThin } from "react-icons/pi";
@@ -98,22 +102,23 @@ export const itemsNavbar = [
   },
   {
     id: 3,
-    title: "Book",
-    icon: <BookText size={25} color="#fff" strokeWidth={1} />,
-    link: "/services",
-  },
-  {
-    id: 4,
     title: "Target",
     icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
     link: "/portfolio",
   },
   {
-    id: 5,
-    title: "Home",
+    id: 4,
+    title: "Testimonials",
     icon: <Speech size={25} color="#fff" strokeWidth={1} />,
     link: "/testimonials",
   },
+  // Por ahora estará deshabilitado, pero se deja preparado para futuras secciones de servicios,blog o como uso la IA.
+  /* {
+    id: 5,
+    title: "Book",
+    icon: <BookText size={25} color="#fff" strokeWidth={1} />,
+    link: "/services",
+  }, */
 ];
 
 export const dataAboutPage = [
@@ -152,8 +157,7 @@ export const dataAboutPage = [
     id: 3,
     title: "Grado Superior",
     subtitle: "Desarrollo de Aplicaciones Multiplataforma",
-    companyDescription:
-      "IES JUAN DE GARAY",
+    companyDescription: "IES JUAN DE GARAY",
     description: [
       "Arquitectura Backend avanzada: Desarrollo de lógica de negocio y APIs REST utilizando Spring Boot, Hibernate/JPA, y seguridad mediante JWT y OAuth2.",
       "Desarrollo Móvil Nativo: Creación de aplicaciones con Kotlin y Android Studio, implementando persistencia local (Room), navegación con Jetpack y consumo de APIs con Retrofit.",
@@ -167,14 +171,13 @@ export const dataAboutPage = [
     id: 4,
     title: "Grado Superior",
     subtitle: "Desarrollo de Aplicaciones Web",
-    companyDescription:
-      "IES SERPIS",
+    companyDescription: "IES SERPIS",
     description: [
       "Desarrollo Full-Stack: Dominio de entornos cliente-servidor utilizando PHP con Laravel para el backend y arquitecturas modernas basadas en componentes con React y Next.js.",
       "Arquitecturas de Interfaz y UX: Diseño de interfaces web responsivas y accesibles con Tailwind CSS, garantizando una experiencia de usuario óptima y alto rendimiento en navegadores.",
       "Gestión de Datos y Persistencia: Diseño avanzado de bases de datos relacionales con MySQL, implementando el uso de ORMs como Drizzle o Eloquent para la manipulación eficiente de datos.",
       "Integración de Sistemas y APIs: Desarrollo y consumo de APIs RESTful seguras, gestionando estados complejos del lado del cliente mediante herramientas como TanStack Query.",
-      "Despliegue y Cloud Computing: Configuración de entornos de producción, automatización de flujos de trabajo con GitHub Actions y despliegue en plataformas como Vercel o AWS."
+      "Despliegue y Cloud Computing: Configuración de entornos de producción, automatización de flujos de trabajo con GitHub Actions y despliegue en plataformas como Vercel o AWS.",
     ],
     date: "Mar 2018",
   },
@@ -348,66 +351,288 @@ export const serviceData = [
 export const dataPortfolio = [
   {
     id: 1,
-    title: "Web Pro",
+    title: "CapiFriends Social Network",
     image: "/image-1.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Frontend",
+    description:
+      "Capifriends es la evolución de una red social educativa a una aplicación moderna construida con Next.js (App Router) + Tailwind CSS + Supabase (PostgreSQL).",
+    imagesGallery: ["/image-1.jpg", "/image-2.jpg", "/image-3.jpg"],
+    strategies: [
+      {
+        title: "Velocidad",
+        description:
+          "Carga inicial reducida en un 40% usando imágenes Next/Image optimizadas.",
+      },
+      {
+        title: "Animación",
+        description:
+          "Experiencia inmersiva con Framer Motion sin sacrificar rendimiento.",
+      },
+      {
+        title: "SEO",
+        description:
+          "Estructura semántica que mejoró el ranking en Lighthouse a 100%.",
+      },
+    ],
+    techStack: [
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "React", icon: <SiReact size={18} /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Supabase", icon: <SiSupabase size={18} /> },
+      { name: "PostgreSQL", icon: <SiPostgresql size={18} /> },
+    ],
   },
   {
     id: 2,
-    title: "Desarrollo Web Ágil",
+    title: "Icam Memory",
     image: "/image-2.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Fullstack",
+    description:
+      "Plataforma de gestión empresarial con panel de administración y roles de usuario.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Seguridad",
+        description: "Implementación de JWT y roles de usuario protegidos.",
+      },
+      {
+        title: "Base de Datos",
+        description: "Modelado relacional optimizado para consultas complejas.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Node.js", icon: <SiNodedotjs /> },
+      { name: "Mongo DB", icon: <SiMongodb /> },
+    ],
   },
   {
     id: 3,
-    title: "Estrategias Web",
+    title: "AI Dashboard",
     image: "/image-3.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Frontend",
+    description:
+      "Dashboard de analíticas con integración de IA para predicción de datos.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Seguridad",
+        description: "Implementación de JWT y roles de usuario protegidos.",
+      },
+      {
+        title: "Base de Datos",
+        description: "Modelado relacional optimizado para consultas complejas.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+    ],
   },
   {
     id: 4,
-    title: "Ideas Creativas",
+    title: "Job Finder App",
     image: "/image-4.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Mobile",
+    description:
+      "Aplicación móvil para búsqueda de empleo con geolocalización en tiempo real.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Seguridad",
+        description: "Implementación de JWT y roles de usuario protegidos.",
+      },
+      {
+        title: "Base de Datos",
+        description: "Modelado relacional optimizado para consultas complejas.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "React Native", icon: <SiReact /> },
+      { name: "Stripe", icon: <SiStripe /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+    ],
   },
   {
     id: 5,
-    title: "Webs Impactantes",
+    title: "Crypto Marketplace",
     image: "/image-5.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Fullstack",
+    description:
+      "Exchange de criptomonedas con gráficos en tiempo real y autenticación segura.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Seguridad",
+        description: "Implementación de JWT y roles de usuario protegidos.",
+      },
+      {
+        title: "Base de Datos",
+        description: "Modelado relacional optimizado para consultas complejas.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Prisma", icon: <SiPostgresql /> },
+    ],
   },
   {
     id: 6,
-    title: "Web Dinámica",
+    title: "Dynamic Analytics",
     image: "/image-6.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Frontend",
+    description:
+      "Visualización de datos financieros con gráficos interactivos dinámicos.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Seguridad",
+        description: "Implementación de JWT y roles de usuario protegidos.",
+      },
+      {
+        title: "Base de Datos",
+        description: "Modelado relacional optimizado para consultas complejas.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+    ],
   },
   {
     id: 7,
-    title: "Dark Web ",
+    title: "Dark Web AI",
     image: "/image-7.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Fullstack",
+    description:
+      "SaaS de generación de contenido con IA en modo oscuro profundo.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Seguridad",
+        description: "Implementación de JWT y roles de usuario protegidos.",
+      },
+      {
+        title: "Base de Datos",
+        description: "Modelado relacional optimizado para consultas complejas.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "OpenAI", icon: <SiNodedotjs /> },
+    ],
   },
   {
     id: 8,
-    title: "E-commerce web",
+    title: "E-commerce Hiring",
     image: "/image-8.jpg",
-    urlGithub: "#!",
+    urlGithub: "https://github.com/MarlonDT24",
     urlDemo: "#!",
+    category: "Frontend",
+    description:
+      "Portal de contratación minimalista enfocado en la experiencia del candidato.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Seguridad",
+        description: "Implementación de JWT y roles de usuario protegidos.",
+      },
+      {
+        title: "Base de Datos",
+        description: "Modelado relacional optimizado para consultas complejas.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "React", icon: <SiReact /> },
+      { name: "Figma", icon: <SiFigma /> },
+    ],
   },
+];
+
+export const dataCompanies = [
+    {
+        id: 1,
+        name: "TechGlobal",
+        logo: <Briefcase size={30} className="text-slate-400" />, 
+    },
+    {
+        id: 2,
+        name: "InnovateX",
+        logo: <Zap size={30} className="text-slate-400" />,
+    },
+    {
+        id: 3,
+        name: "FutureWave",
+        logo: <ShieldCheck size={30} className="text-slate-400" />,
+    },
+    {
+        id: 4,
+        name: "CodeCrafters",
+        logo: <Layout size={30} className="text-slate-400" />,
+    },
+    {
+        id: 5,
+        name: "DataSphere",
+        logo: <Users size={30} className="text-slate-400" />,
+    },
+    // Repetimos algunos para el efecto infinito si hay pocos
+    {
+        id: 6,
+        name: "AlphaSys",
+        logo: <Briefcase size={30} className="text-slate-400" />,
+    },
 ];
 
 export const dataTestimonials = [
   {
     id: 1,
     name: "George Snow",
+    role: "CEO & Founder",
+    company: "Snow Solutions",
     description:
       "¡Increíble plataforma! Los testimonios aquí son genuinos y me han ayudado a tomar decisiones informadas. ¡Altamente recomendado!",
     imageUrl: "/profile1.png",
@@ -415,6 +640,8 @@ export const dataTestimonials = [
   {
     id: 2,
     name: "Juan Pérez",
+    role: "Tech Lead",
+    company: "Innovatech",
     description:
       "Me encanta la variedad de testimonios disponibles en esta página. Es inspirador ver cómo otras personas han superado desafíos similares a los míos. ¡Gracias por esta invaluable fuente de motivación!",
     imageUrl: "/profile2.png",
@@ -422,6 +649,8 @@ export const dataTestimonials = [
   {
     id: 3,
     name: "María García",
+    role: "Marketing Director",
+    company: "Brandify",
     description:
       "Excelente recurso para obtener opiniones auténticas sobre diferentes productos y servicios. Me ha ayudado mucho en mis compras en línea. ¡Bravo por este sitio!",
     imageUrl: "/profile3.png",
@@ -429,6 +658,8 @@ export const dataTestimonials = [
   {
     id: 4,
     name: "Laura Snow",
+    role: "Product Owner",
+    company: "Digital Flow",
     description:
       "¡Qué descubrimiento tan fantástico! Los testimonios aquí son honestos y detallados. Me siento más seguro al tomar decisiones después de leer las experiencias compartidas por otros usuarios.",
     imageUrl: "/profile4.png",
@@ -436,6 +667,8 @@ export const dataTestimonials = [
   {
     id: 5,
     name: "Carlos Sánchez",
+    role: "Senior Dev",
+    company: "CodeMasters",
     description:
       "Una joya en la web. Los testimonios son fáciles de encontrar y están bien organizados. ¡Definitivamente mi destino número uno cuando necesito referencias confiables!",
     imageUrl: "/profile5.png",
@@ -443,6 +676,8 @@ export const dataTestimonials = [
   {
     id: 6,
     name: "Antonio Martínez",
+    role: "COO",
+    company: "Logística Global",
     description:
       "¡Fantástico recurso para aquellos que buscan validación antes de tomar decisiones importantes! Los testimonios aquí son veraces y realmente útiles. ¡Gracias por simplificar mi proceso de toma de decisiones!",
     imageUrl: "/profile6.png",
