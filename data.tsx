@@ -1,5 +1,4 @@
 import {
-  BookText,
   MailPlus,
   CodeSquare,
   HomeIcon,
@@ -59,7 +58,12 @@ import {
   SiFigma,
   SiNotion,
   SiEclipseide,
-  SiStripe,
+  SiTrpc,
+  SiShadcnui,
+  SiJavascript,
+  SiHibernate,
+  SiGreensock,
+  SiReactquery,
 } from "react-icons/si";
 import { FaAws, FaJava, FaVuejs } from "react-icons/fa";
 import { PiWhatsappLogoThin } from "react-icons/pi";
@@ -351,29 +355,136 @@ export const serviceData = [
 export const dataPortfolio = [
   {
     id: 1,
+    title: "Vidext Boost Backoffice",
+    image: "/portfolio/vidext-collage.png",
+    urlGithub: "#private",
+    urlDemo: "#!",
+    category: "Fullstack",
+    description:
+      "Plataforma de administración centralizada para gestión de IA generativa. Optimización de flujos de trabajo B2B y analítica de datos en tiempo real.",
+    imagesGallery: [
+      "/portfolio/vidext-dashboard.png",
+      "/portfolio/vidext-workspaces.png",
+      "/portfolio/vidext-chatbot.png",
+      "/portfolio/vidext-modal.png",
+      "/portfolio/vidext-users.png",
+    ],
+    strategies: [
+      {
+        title: "Optimización Operativa",
+        description:
+          "Reducción del 40% en la carga de gestión interna mediante centralización de datos.",
+      },
+      {
+        title: "Data Integrity & Typing",
+        description:
+          "Tipado estricto End-to-End implementando tRPC para sincronización Back-Front.",
+      },
+      {
+        title: "State Management",
+        description:
+          "Uso de TanStack Query para caché inteligente y estados asíncronos complejos.",
+      },
+    ],
+    techStack: [
+      { name: "Next.js 15", icon: <SiNextdotjs size={18} /> },
+      { name: "TypeScript", icon: <SiTypescript size={18} /> },
+      { name: "tRPC", icon: <SiTrpc size={18} /> },
+      { name: "TanStack", icon: <SiReactquery size={18} /> },
+      { name: "Shadcn UI", icon: <SiShadcnui size={18} /> },
+    ],
+  },
+  {
+    id: 2,
+    title: "Icam Memory",
+    image: "/image-2.jpg",
+    urlGithub: "https://github.com/MarlonDT24/icam-memory",
+    urlDemo: "#!",
+    category: "Fullstack",
+    description:
+      "Plataforma de automatización documental y cálculo de normativas (PCI/RSCIEI) para ingeniería.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Automatización",
+        description:
+          "Generación dinámica de documentos Word/Excel desde formularios web.",
+      },
+      {
+        title: "Cálculo Normativo",
+        description:
+          "Motor lógico para cumplimiento del reglamento RSCIEI (PCI Manager).",
+      },
+      {
+        title: "Impacto Real",
+        description:
+          "Herramienta de producción utilizada diariamente por ingenieros.",
+      },
+    ],
+    techStack: [
+      { name: "Laravel", icon: <SiLaravel size={22} /> },
+      { name: "PHP", icon: <SiPhp size={22} /> },
+      { name: "MySQL", icon: <SiMysql size={22} /> },
+      { name: "JavaScript", icon: <SiJavascript size={22} /> },
+    ],
+  },
+  {
+    id: 3,
+    title: "FBCV Mobile App",
+    image: "/image-3.jpg",
+    urlGithub: "https://github.com/MarlonDT24/basketball-android-app",
+    urlDemo: "#!",
+    category: "Mobile",
+    description:
+      "Aplicación nativa Android para la Federación de Baloncesto. Gestión de competiciones y clubes.",
+    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    strategies: [
+      {
+        title: "Arquitectura MVVM",
+        description:
+          "Separación limpia de lógica de negocio y UI con Jetpack Compose.",
+      },
+      {
+        title: "Offline First",
+        description: "Persistencia local para consulta de datos sin conexión.",
+      },
+      {
+        title: "Escalabilidad",
+        description: "Arquitectura modular lista para añadir microservicios.",
+      },
+    ],
+    techStack: [
+      { name: "Kotlin", icon: <SiKotlin size={18} /> },
+      { name: "Android", icon: <SiAndroidstudio size={18} /> },
+      { name: "Jetpack", icon: <SiGoogle size={18} /> },
+      { name: "Hibernate", icon: <SiHibernate size={18} /> },
+    ],
+  },
+  {
+    id: 4,
     title: "CapiFriends Social Network",
     image: "/image-1.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
+    urlGithub: "https://github.com/MarlonDT24/capifriends-social-network",
     urlDemo: "#!",
-    category: "Frontend",
+    category: "Fullstack",
     description:
       "Capifriends es la evolución de una red social educativa a una aplicación moderna construida con Next.js (App Router) + Tailwind CSS + Supabase (PostgreSQL).",
     imagesGallery: ["/image-1.jpg", "/image-2.jpg", "/image-3.jpg"],
     strategies: [
       {
-        title: "Velocidad",
+        title: "Real-time Data",
         description:
-          "Carga inicial reducida en un 40% usando imágenes Next/Image optimizadas.",
+          "Sincronización instantánea de interacciones (likes/comentarios) mediante suscripciones a base de datos (Supabase Realtime).",
       },
       {
-        title: "Animación",
+        title: "Social Graph Logic",
         description:
-          "Experiencia inmersiva con Framer Motion sin sacrificar rendimiento.",
+          "Modelado de relaciones bidireccionales complejas (Amistades/Seguidores) con integridad referencial en PostgreSQL.",
       },
       {
-        title: "SEO",
+        title: "Optimistic UI",
         description:
-          "Estructura semántica que mejoró el ranking en Lighthouse a 100%.",
+          "Interfaz con feedback inmediato (Optimistic Updates) para una experiencia de usuario sin latencia perceptible.",
       },
     ],
     techStack: [
@@ -385,97 +496,41 @@ export const dataPortfolio = [
     ],
   },
   {
-    id: 2,
-    title: "Icam Memory",
-    image: "/image-2.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
+    id: 5,
+    title: "LabBurger Management",
+    image: "/image-4.jpg",
+    urlGithub: "https://github.com/MarlonDT24/labburger",
     urlDemo: "#!",
     category: "Fullstack",
     description:
-      "Plataforma de gestión empresarial con panel de administración y roles de usuario.",
+      "Plataforma integral de gestión de restauración con configurador de producto interactivo y panel de administración MVC.",
     imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
     strategies: [
       {
-        title: "Seguridad",
-        description: "Implementación de JWT y roles de usuario protegidos.",
+        title: "Interactive Builder",
+        description:
+          "Módulo 'Create Your Burger' con lógica de estado compleja y animaciones fluidas (GSAP) para personalización de pedidos.",
       },
       {
-        title: "Base de Datos",
-        description: "Modelado relacional optimizado para consultas complejas.",
+        title: "Admin Dashboard",
+        description:
+          "Sistema de gestión de roles (RBAC) para administración de inventario, reservas y moderación de reseñas.",
       },
       {
-        title: "Escalabilidad",
-        description: "Arquitectura modular lista para añadir microservicios.",
+        title: "Legacy Optimization",
+        description:
+          "Arquitectura MVC robusta con optimización de consultas Eloquent ORM para alto rendimiento en servidor.",
       },
     ],
     techStack: [
-      { name: "React", icon: <SiReact /> },
-      { name: "Node.js", icon: <SiNodedotjs /> },
-      { name: "Mongo DB", icon: <SiMongodb /> },
+      { name: "Laravel", icon: <SiLaravel size={18} /> },
+      { name: "PHP", icon: <SiPhp size={18} /> },
+      { name: "GSAP", icon: <SiGreensock size={18} /> },
+      { name: "MySQL", icon: <SiMysql size={18} /> },
     ],
   },
   {
-    id: 3,
-    title: "AI Dashboard",
-    image: "/image-3.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
-    urlDemo: "#!",
-    category: "Frontend",
-    description:
-      "Dashboard de analíticas con integración de IA para predicción de datos.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
-    strategies: [
-      {
-        title: "Seguridad",
-        description: "Implementación de JWT y roles de usuario protegidos.",
-      },
-      {
-        title: "Base de Datos",
-        description: "Modelado relacional optimizado para consultas complejas.",
-      },
-      {
-        title: "Escalabilidad",
-        description: "Arquitectura modular lista para añadir microservicios.",
-      },
-    ],
-    techStack: [
-      { name: "React", icon: <SiReact /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "Tailwind", icon: <SiTailwindcss /> },
-    ],
-  },
-  {
-    id: 4,
-    title: "Job Finder App",
-    image: "/image-4.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
-    urlDemo: "#!",
-    category: "Mobile",
-    description:
-      "Aplicación móvil para búsqueda de empleo con geolocalización en tiempo real.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
-    strategies: [
-      {
-        title: "Seguridad",
-        description: "Implementación de JWT y roles de usuario protegidos.",
-      },
-      {
-        title: "Base de Datos",
-        description: "Modelado relacional optimizado para consultas complejas.",
-      },
-      {
-        title: "Escalabilidad",
-        description: "Arquitectura modular lista para añadir microservicios.",
-      },
-    ],
-    techStack: [
-      { name: "React Native", icon: <SiReact /> },
-      { name: "Stripe", icon: <SiStripe /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
-    ],
-  },
-  {
-    id: 5,
+    id: 6,
     title: "Crypto Marketplace",
     image: "/image-5.jpg",
     urlGithub: "https://github.com/MarlonDT24",
@@ -505,7 +560,7 @@ export const dataPortfolio = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Dynamic Analytics",
     image: "/image-6.jpg",
     urlGithub: "https://github.com/MarlonDT24",
@@ -534,7 +589,7 @@ export const dataPortfolio = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Dark Web AI",
     image: "/image-7.jpg",
     urlGithub: "https://github.com/MarlonDT24",
@@ -562,69 +617,40 @@ export const dataPortfolio = [
       { name: "OpenAI", icon: <SiNodedotjs /> },
     ],
   },
-  {
-    id: 8,
-    title: "E-commerce Hiring",
-    image: "/image-8.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
-    urlDemo: "#!",
-    category: "Frontend",
-    description:
-      "Portal de contratación minimalista enfocado en la experiencia del candidato.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
-    strategies: [
-      {
-        title: "Seguridad",
-        description: "Implementación de JWT y roles de usuario protegidos.",
-      },
-      {
-        title: "Base de Datos",
-        description: "Modelado relacional optimizado para consultas complejas.",
-      },
-      {
-        title: "Escalabilidad",
-        description: "Arquitectura modular lista para añadir microservicios.",
-      },
-    ],
-    techStack: [
-      { name: "React", icon: <SiReact /> },
-      { name: "Figma", icon: <SiFigma /> },
-    ],
-  },
 ];
 
 export const dataCompanies = [
-    {
-        id: 1,
-        name: "TechGlobal",
-        logo: <Briefcase size={30} className="text-slate-400" />, 
-    },
-    {
-        id: 2,
-        name: "InnovateX",
-        logo: <Zap size={30} className="text-slate-400" />,
-    },
-    {
-        id: 3,
-        name: "FutureWave",
-        logo: <ShieldCheck size={30} className="text-slate-400" />,
-    },
-    {
-        id: 4,
-        name: "CodeCrafters",
-        logo: <Layout size={30} className="text-slate-400" />,
-    },
-    {
-        id: 5,
-        name: "DataSphere",
-        logo: <Users size={30} className="text-slate-400" />,
-    },
-    // Repetimos algunos para el efecto infinito si hay pocos
-    {
-        id: 6,
-        name: "AlphaSys",
-        logo: <Briefcase size={30} className="text-slate-400" />,
-    },
+  {
+    id: 1,
+    name: "TechGlobal",
+    logo: <Briefcase size={30} className="text-slate-400" />,
+  },
+  {
+    id: 2,
+    name: "InnovateX",
+    logo: <Zap size={30} className="text-slate-400" />,
+  },
+  {
+    id: 3,
+    name: "FutureWave",
+    logo: <ShieldCheck size={30} className="text-slate-400" />,
+  },
+  {
+    id: 4,
+    name: "CodeCrafters",
+    logo: <Layout size={30} className="text-slate-400" />,
+  },
+  {
+    id: 5,
+    name: "DataSphere",
+    logo: <Users size={30} className="text-slate-400" />,
+  },
+  // Repetimos algunos para el efecto infinito si hay pocos
+  {
+    id: 6,
+    name: "AlphaSys",
+    logo: <Briefcase size={30} className="text-slate-400" />,
+  },
 ];
 
 export const dataTestimonials = [
