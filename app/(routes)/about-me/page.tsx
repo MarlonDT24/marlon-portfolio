@@ -21,7 +21,7 @@ export default function AboutMePage() {
 
         <CounterServices />
         
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 md:gap-10 mt-8 md:mt-12">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 md:gap-10 mt-8 md:mt-22">
           
           {/* TRAYECTORIA: Ocupa 7 de 12 columnas en pantallas grandes */}
           <div className="xl:col-span-7 order-2 xl:order-1">
