@@ -1,8 +1,8 @@
 # 👨‍💻 Marlon Torres | Fullstack Developer Portfolio
 
-Este repositorio aloja el código fuente de mi portafolio profesional. Diseñado no solo para mostrar mi trabajo, sino para demostrar dominio técnico sobre el ecosistema moderno de React y Next.js en 2025.
+Este repositorio aloja el código fuente de mi portafolio profesional. Diseñado no solo para mostrar mi trabajo, sino para demostrar dominio técnico sobre el ecosistema moderno de React y Next.js.
 
-🔗 **Live Demo:** [https://marlon-portfolio.vercel.app](https://marlon-portfolio.vercel.app)
+🔗 **Live Demo:** [https://marlon-portfolio.vercel.app](https://marlondev-portfolio.vercel.app/)
 
 ## ⚡ Tech Stack & Características
 
