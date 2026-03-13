@@ -80,6 +80,9 @@ export default function CoverParticles() {
                   enable: true,
                 },
                 value: 80,
+                limit: {
+                  value: 100,
+                },
               },
               opacity: {
                 value: 0.5,
