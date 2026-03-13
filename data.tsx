@@ -397,13 +397,25 @@ export const dataPortfolio = [
   {
     id: 2,
     title: "Icam Memory",
-    image: "/image-2.jpg",
+    image: "/portfolio/icam-memory/icam-memory-banner.png",
     urlGithub: "https://github.com/MarlonDT24/icam-memory",
     urlDemo: "#!",
     category: "Fullstack",
     description:
       "Plataforma de automatización documental y cálculo de normativas (PCI/RSCIEI) para ingeniería.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+    imagesGallery: [
+      "/portfolio/icam-memory/icam-login.png",
+      "/portfolio/icam-memory/icam-dashboard.png",
+      "/portfolio/icam-memory/icam-pci.png",
+      "/portfolio/icam-memory/icam-compatibility.png",
+      "/portfolio/icam-memory/icam-compatibility_2.png",
+      "/portfolio/icam-memory/icam-electro.png",
+      "/portfolio/icam-memory/icam-electro_2.png",
+      "/portfolio/icam-memory/icam-history.png",
+      "/portfolio/icam-memory/icam-history_2.png",
+      "/portfolio/icam-memory/icam-memory-show.png",
+      "/portfolio/icam-memory/icam-memory-show_2.png",
+    ],
     strategies: [
       {
         title: "Automatización",
