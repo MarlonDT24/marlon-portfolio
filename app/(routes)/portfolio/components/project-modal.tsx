@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { X, Github, Globe, CheckCircle2, Lock } from "lucide-react";
+import { X, Github, Globe, CheckCircle2, Lock, ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import { ReactNode } from "react";
+import { Pagination } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
+import { ReactNode, useRef } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 interface TechStackItem {
   name: string;
@@ -36,6 +36,7 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
+  const swiperRef = useRef<SwiperType | null>(null);
   // Evitar propagación del click al contenedor de fondo
   const handleContentClick = (e: React.MouseEvent) => e.stopPropagation();
 
@@ -65,27 +66,41 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
           {/* 1. HERO SECTION & GALLERY */}
           <div className="relative h-75 md:h-112.5 w-full bg-zinc-900">
             {data.imagesGallery ? (
-              <Swiper
-                pagination={{ clickable: true, dynamicBullets: true }}
-                navigation={true}
-                modules={[Pagination, Navigation]}
-                className="h-full w-full project-slider"
-              >
-                {data.imagesGallery.map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={img}
-                        alt={`Slide ${index}`}
-                        fill
-                        className="object-cover"
-                      />
-                      {/* Gradiente inferior para legibilidad */}
-                      <div className="absolute inset-0 bg-linear-to-t from-[#121212] via-transparent to-transparent opacity-90" />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+              <>
+                <Swiper
+                  onSwiper={(swiper) => { swiperRef.current = swiper; }}
+                  pagination={{ clickable: true, dynamicBullets: true }}
+                  modules={[Pagination]}
+                  className="h-full w-full project-slider"
+                >
+                  {data.imagesGallery.map((img, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={img}
+                          alt={`Slide ${index}`}
+                          fill
+                          className="object-cover"
+                        />
+                        {/* Gradiente inferior para legibilidad */}
+                        <div className="absolute inset-0 bg-linear-to-t from-[#121212] via-transparent to-transparent opacity-90" />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <button
+                  onClick={() => swiperRef.current?.slidePrev()}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 rounded-full p-2 text-emerald-400 transition-colors"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+                <button
+                  onClick={() => swiperRef.current?.slideNext()}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 rounded-full p-2 text-emerald-400 transition-colors"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </>
             ) : (
               <Image
                 src={data.image}
@@ -215,22 +230,7 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
         </div>
       </motion.div>
 
-      {/* Estilos globales para el slider del modal (puedes poner esto en globals.css o dejarlos aquí inline si usas styled-jsx) */}
       <style jsx global>{`
-        .project-slider .swiper-button-next,
-        .project-slider .swiper-button-prev {
-          color: #10b981 !important;
-          background: rgba(0, 0, 0, 0.5);
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          padding: 25px;
-        }
-        .project-slider .swiper-button-next::after,
-        .project-slider .swiper-button-prev::after {
-          font-size: 18px !important;
-          font-weight: bold;
-        }
         .project-slider .swiper-pagination-bullet-active {
           background: #10b981 !important;
         }
