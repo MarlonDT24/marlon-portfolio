@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { X, Send, User, Mail, MessageSquare } from "lucide-react";
+import { X, Send, User, Mail, MessageSquare, MessageCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -15,7 +15,7 @@ const formSchema = z.object({
   gotcha: z.string().optional(),
 });
 
-export default function ContactManager() {
+export default function ContactManager({ variant = "default" }: { variant?: "default" | "icon" }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"form" | "calendar">("form");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -70,12 +70,22 @@ export default function ContactManager() {
 
   return (
     <>
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-5 py-2.5 text-md font-medium bg-green-800 text-white transition-all border-2 border-green-600 rounded-full hover:bg-green-500/70 hover:text-white shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)]"
-      >
-        Contacta Conmigo
-      </button>
+      {variant === "icon" ? (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="relative transition-all duration-300 text-green-500 hover:text-green-300 drop-shadow-[0_0_8px_rgba(34,197,94,0.6)] hover:drop-shadow-[0_0_14px_rgba(34,197,94,0.9)]"
+          title="Contacta Conmigo"
+        >
+          <MessageCircle size={30} strokeWidth={1} />
+        </button>
+      ) : (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="px-5 py-2.5 text-md font-medium bg-green-800 text-white transition-all border-2 border-green-600 rounded-full hover:bg-green-500/70 hover:text-white shadow-[0_0_20px_rgba(34,197,94,0.2)] hover:shadow-[0_0_30px_rgba(34,197,94,0.6)]"
+        >
+          Contacta Conmigo
+        </button>
+      )}
 
       {/* MODAL OVERLAY */}
       {mounted &&

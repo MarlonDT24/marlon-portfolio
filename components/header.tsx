@@ -2,6 +2,7 @@ import Link from "next/link";
 import MotionTransition from "./transition-component";
 import { socialNetworks } from "@/data";
 import CvSelector from "./cv-selector";
+import ContactManager from "./contact-manager";
 
 export default function Header() {
   return (
@@ -31,6 +32,7 @@ export default function Header() {
                 {logo}
               </Link>
             ))}
+            <ContactManager variant="icon" />
             {/* 2. CV EN MOBILE (Icono integrado) - Visible solo en móvil (md:hidden) */}
             <div className="md:hidden flex items-center">
                 <CvSelector isMobile={true} />
