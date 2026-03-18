@@ -14,7 +14,8 @@ export default function Navbar() {
       className="fixed z-40 flex flex-col items-center justify-center w-full mt-auto h-max bottom-10"
     >
       <nav>
-        <div className="flex items-center justify-center gap-2 px-4 py-1 rounded-full bg-white/35 background-blur-sm">
+        <div className="flex items-center justify-center gap-2 px-4 py-1 rounded-full bg-[#0b0d0f]/75 backdrop-blur-md border border-white/10
+  md:bg-white/35 md:border-transparent">
           {itemsNavbar.map((item) => (
             <div
               key={item.id}

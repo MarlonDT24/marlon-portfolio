@@ -9,7 +9,7 @@ export default function ServicesPage() {
       <TransitionPage />
       <CircleImage />
       <AvatarServices />
-      <div className="grid items-center justify-center h-screen max-w-4xl gap-6 mx-auto md:grid-cols-2">
+      <div className="grid items-center justify-center h-screen max-w-4xl gap-6 mx-auto px-5 md:px-0 md:grid-cols-2">
         <div className="max-w-112.5">
           <h1 className="text-2xl leading-tight text-center md:text-left md:text-4xl md:mb-5">
             Mis <span className="font-bold text-secondary"> servicios.</span>

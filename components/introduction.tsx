@@ -9,7 +9,7 @@ import { ArrowRight  } from "lucide-react";
 export default function Introduction() {
   return (
     <div className="z-20 w-full ">
-      <div className="z-20 grid items-center h-full p-6 py-30 md:py-0 md:grid-cols-2 max-w-7xl mx-auto gap-8 lg:gap-12">
+      <div className="z-20 grid items-start md:items-center md:h-full py-30 md:py-0 md:grid-cols-2 max-w-7xl mx-auto gap-8 lg:gap-12">
         {/* Contenedor de imagen con efecto glow */}
         <div className="relative w-60 h-60 md:w-87.5 md:h-87.5 lg:w-130.5 lg:h-130.5 mx-auto md:mx-0 group">
           {/* Borde animado con degradado que rota */}

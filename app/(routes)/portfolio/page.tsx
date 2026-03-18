@@ -17,9 +17,9 @@ export default function PortfolioPage() {
   // Pestañas de filtro.
   const filters = [
     { tag: "All", label: "Todos" },
-    { tag: "Frontend", label: "Frontend" },
+    // { tag: "Frontend", label: "Frontend" },
     { tag: "Fullstack", label: "Fullstack" },
-    { tag: "Mobile", label: "Mobile" }, 
+    // { tag: "Mobile", label: "Mobile" }, 
   ];
 
   const filteredProjects =
@@ -51,7 +51,7 @@ export default function PortfolioPage() {
                         relative px-4 py-2 md:px-6 md:py-2 rounded-full text-sm md:text-base font-medium transition-all duration-300
                         ${
                           activeFilter === filter.tag
-                            ? "text-green-500 bg-emerald-500/10 border border-green-500/70 shadow-[0_0_15px_rgba(52,211,153,0.15)]"
+                            ? "text-green-500 bg-green-500/10 border border-green-500/70 shadow-[0_0_15px_rgba(52,211,153,0.15)]"
                             : "text-slate-400 border border-white/20 hover:border-white/30 hover:text-white"
                         }
                     `}
@@ -64,7 +64,7 @@ export default function PortfolioPage() {
         {/* --- GRID DE PROYECTOS --- */}
         <motion.div
           layout
-          className="relative z-10 grid max-w-6xl w-full gap-6 mx-auto mt-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 md:px-0"
+          className="relative z-10 grid max-w-6xl w-full gap-6 mx-auto mt-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((data) => (
