@@ -35,7 +35,7 @@ export default function PortfolioBox(props: PortfolioBoxProps) {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="group relative flex flex-col justify-between rounded-3xl overflow-hidden border border-white/10 bg-gray-900 hover:border-secondary/40 transition-all duration-300 h-full shadow-lg"
+            className="group relative flex flex-col justify-between rounded-3xl overflow-hidden border border-white/10 bg-gray-900 hover:border-green-500/70 transition-all duration-300 h-full shadow-lg"
         >
             {/* --- IMAGEN Y ACCIONES --- */}
             <div className="relative aspect-video w-full overflow-hidden">
@@ -94,10 +94,10 @@ export default function PortfolioBox(props: PortfolioBoxProps) {
             <div className="p-5 flex flex-col justify-between grow">
                 <div>
                     <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white group-hover:text-green-500 transition-colors">
                             {title}
                         </h3>
-                        <ArrowUpRight className="text-slate-500 group-hover:text-emerald-400 transition-colors opacity-0 group-hover:opacity-100" size={20}/>
+                        <ArrowUpRight className="text-slate-500 group-hover:text-green-500 transition-colors opacity-0 group-hover:opacity-100" size={20}/>
                     </div>
                     
                     <p className="text-sm text-slate-400 line-clamp-2 mb-4">
@@ -113,7 +113,7 @@ export default function PortfolioBox(props: PortfolioBoxProps) {
                             {techStack && techStack.map((tech, index) => (
                                 <div 
                                     key={index} 
-                                    className="text-slate-400 hover:text-emerald-400 transition-colors text-lg"
+                                    className="text-slate-400 hover:text-green-500 transition-colors text-lg"
                                     title={tech.name} 
                                 >
                                     {tech.icon}

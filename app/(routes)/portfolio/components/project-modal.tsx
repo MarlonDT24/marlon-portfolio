@@ -90,13 +90,13 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
                 </Swiper>
                 <button
                   onClick={() => swiperRef.current?.slidePrev()}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 rounded-full p-2 text-emerald-400 transition-colors"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 rounded-full p-2 text-green-500 transition-colors"
                 >
                   <ChevronLeft size={20} />
                 </button>
                 <button
                   onClick={() => swiperRef.current?.slideNext()}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 rounded-full p-2 text-emerald-400 transition-colors"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 rounded-full p-2 text-green-500 transition-colors"
                 >
                   <ChevronRight size={20} />
                 </button>
@@ -112,7 +112,7 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
 
             {/* Título sobre la imagen (Estilo Hero) */}
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-10">
-              <span className="px-3 py-1 text-xs font-bold bg-emerald-500 text-black rounded-full mb-2 inline-block">
+              <span className="px-3 py-1 text-xs font-bold bg-green-500 text-black rounded-full mb-2 inline-block">
                 {data.category}
               </span>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">
@@ -127,7 +127,7 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <span className="w-1 h-6 bg-emerald-500 rounded-full"></span>
+                  <span className="w-1 h-6 bg-green-500 rounded-full"></span>
                   Sobre el Proyecto
                 </h3>
                 <p className="text-slate-300 leading-relaxed text-base md:text-lg">
@@ -146,11 +146,11 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
                     {data.strategies.map((strat, idx) => (
                       <div
                         key={idx}
-                        className="bg-white/5 p-4 rounded-xl border border-white/5 hover:border-emerald-500/30 transition-colors"
+                        className="bg-white/5 p-4 rounded-xl border border-white/5 hover:border-green-500/30 transition-colors"
                       >
                         <div className="flex items-start gap-3">
                           <CheckCircle2
-                            className="text-emerald-500 mt-1 min-w-5"
+                            className="text-green-500 mt-1 min-w-5"
                             size={20}
                           />
                           <div>
@@ -182,7 +182,7 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
                     <Link
                       href={data.urlDemo}
                       target="_blank"
-                      className="flex items-center justify-center gap-2 w-full py-3 bg-emerald-500 hover:bg-emerald-400 text-black font-bold rounded-xl transition-all hover:scale-[1.02]"
+                      className="flex items-center justify-center gap-2 w-full py-3 bg-green-500 hover:bg-green-400 text-black font-bold rounded-xl transition-all hover:scale-[1.02]"
                     >
                       <Globe size={18} /> Ver Demo Live
                     </Link>
@@ -219,7 +219,7 @@ export default function ProjectModal({ data, closeModal }: ProjectModalProps) {
                       key={i}
                       className="flex items-center gap-2 px-3 py-2 bg-black/40 rounded-lg text-slate-300 border border-white/5 text-sm"
                     >
-                      <span className="text-emerald-400">{tech.icon}</span>
+                      <span className="text-green-500">{tech.icon}</span>
                       {tech.name}
                     </div>
                   ))}
