@@ -1,5 +1,4 @@
 import {
-  MailPlus,
   CodeSquare,
   HomeIcon,
   UserRound,
@@ -64,9 +63,11 @@ import {
   SiHibernate,
   SiGreensock,
   SiReactquery,
+  SiJunit5,
+  SiDocker,
 } from "react-icons/si";
 import { FaAws, FaJava, FaVuejs } from "react-icons/fa";
-import { PiWhatsappLogoThin } from "react-icons/pi";
+import { BiLogoSpringBoot } from "react-icons/bi";
 
 export const socialNetworks = [
   {
@@ -78,16 +79,6 @@ export const socialNetworks = [
     id: 2,
     logo: <Linkedin size={30} strokeWidth={1} />,
     src: "https://www.linkedin.com/in/marlon-torres-982a17305/",
-  },
-  {
-    id: 3,
-    logo: <MailPlus size={30} strokeWidth={1} />,
-    src: "mailto:torresmarlon40@gmail.com?subject=Contacto%20desde%20Portfolio",
-  },
-  {
-    id: 4,
-    logo: <PiWhatsappLogoThin size={33} strokeWidth={1} />,
-    src: "https://wa.me/34600000000?text=Hola%20Marlon,%20vi%20tu%20portfolio...",
   },
 ];
 
@@ -110,12 +101,12 @@ export const itemsNavbar = [
     icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
     link: "/portfolio",
   },
-  {
+  /* {
     id: 4,
     title: "Testimonials",
     icon: <Speech size={25} color="#fff" strokeWidth={1} />,
     link: "/testimonials",
-  },
+  }, */
   // Por ahora estará deshabilitado, pero se deja preparado para futuras secciones de servicios,blog o como uso la IA.
   /* {
     id: 5,
@@ -442,6 +433,52 @@ export const dataPortfolio = [
   },
   {
     id: 3,
+    title: "Cineverse Web",
+    image: "/portfolio/cineverse/cineverse-collage.png",
+    urlGithub: "https://github.com/MarlonDT24/cineverse-web",
+    urlDemo: "#!",
+    category: "Fullstack",
+    description:
+      "Solución tecnológica integral para administración de complejos de cine. Arquitectura Monorepo: Backend (Spring Boot 3 + Java 17) + Frontend (React 18) con comunicación en tiempo real vía WebSockets.",
+    imagesGallery: [
+      "/portfolio/cineverse/cineverse-films.png",
+      "/portfolio/cineverse/cineverse-dashboard.png",
+      "/portfolio/cineverse/cineverse-dashboard-2.png",
+      "/portfolio/cineverse/cineverse-rooms.png",
+      "/portfolio/cineverse/cineverse-sessions.png",
+      "/portfolio/cineverse/cineverse-chat.png",
+      "/portfolio/cineverse/cineverse-login.png",
+    ],
+    strategies: [
+      {
+        title: "Seguridad JWT Empresarial",
+        description:
+          "Sistema de autenticación basado en JSON Web Tokens con gestión de roles y permisos para control de acceso granular en el panel administrativo.",
+      },
+      {
+        title: "Comunicación Bidireccional STOMP",
+        description:
+          "Implementación de protocolo STOMP sobre WebSockets para chat de soporte técnico en tiempo real y sincronización instantánea de eventos del sistema.",
+      },
+      {
+        title: "Persistencia JPA/Hibernate",
+        description:
+          "Capa de persistencia robusta con Spring Data JPA y Hibernate sobre MySQL 8.0, gestionando 10 tablas relacionales con integridad referencial completa.",
+      },
+    ],
+    techStack: [
+      { name: "Spring Boot", icon: <BiLogoSpringBoot size={18} /> },
+      { name: "React", icon: <SiReact size={18} /> },
+      { name: "Hibernate", icon: <SiHibernate size={18} /> },
+      { name: "MySQL", icon: <SiMysql size={18} /> },
+      { name: "WebSockets", icon: <Globe size={18} /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss size={18} /> },
+      { name: "JUnit", icon: <SiJunit5 size={18} /> },
+      { name: "Docker", icon: <SiDocker size={18} /> },
+    ],
+  },
+  /* {
+    id: 4,
     title: "FBCV Mobile App",
     image: "/image-3.jpg",
     urlGithub: "https://github.com/MarlonDT24/basketball-android-app",
@@ -473,7 +510,7 @@ export const dataPortfolio = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "CapiFriends Social Network",
     image: "/image-1.jpg",
     urlGithub: "https://github.com/MarlonDT24/capifriends-social-network",
@@ -506,9 +543,9 @@ export const dataPortfolio = [
       { name: "Supabase", icon: <SiSupabase size={18} /> },
       { name: "PostgreSQL", icon: <SiPostgresql size={18} /> },
     ],
-  },
+  }, */
   {
-    id: 5,
+    id: 4,
     title: "LabBurger Management",
     image: "/image-4.jpg",
     urlGithub: "https://github.com/MarlonDT24/labburger",
@@ -539,94 +576,6 @@ export const dataPortfolio = [
       { name: "PHP", icon: <SiPhp size={18} /> },
       { name: "GSAP", icon: <SiGreensock size={18} /> },
       { name: "MySQL", icon: <SiMysql size={18} /> },
-    ],
-  },
-  {
-    id: 6,
-    title: "Crypto Marketplace",
-    image: "/image-5.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
-    urlDemo: "#!",
-    category: "Fullstack",
-    description:
-      "Exchange de criptomonedas con gráficos en tiempo real y autenticación segura.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
-    strategies: [
-      {
-        title: "Seguridad",
-        description: "Implementación de JWT y roles de usuario protegidos.",
-      },
-      {
-        title: "Base de Datos",
-        description: "Modelado relacional optimizado para consultas complejas.",
-      },
-      {
-        title: "Escalabilidad",
-        description: "Arquitectura modular lista para añadir microservicios.",
-      },
-    ],
-    techStack: [
-      { name: "Next.js", icon: <SiNextdotjs /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "Prisma", icon: <SiPostgresql /> },
-    ],
-  },
-  {
-    id: 7,
-    title: "Dynamic Analytics",
-    image: "/image-6.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
-    urlDemo: "#!",
-    category: "Frontend",
-    description:
-      "Visualización de datos financieros con gráficos interactivos dinámicos.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
-    strategies: [
-      {
-        title: "Seguridad",
-        description: "Implementación de JWT y roles de usuario protegidos.",
-      },
-      {
-        title: "Base de Datos",
-        description: "Modelado relacional optimizado para consultas complejas.",
-      },
-      {
-        title: "Escalabilidad",
-        description: "Arquitectura modular lista para añadir microservicios.",
-      },
-    ],
-    techStack: [
-      { name: "React", icon: <SiReact /> },
-      { name: "Tailwind", icon: <SiTailwindcss /> },
-    ],
-  },
-  {
-    id: 8,
-    title: "Dark Web AI",
-    image: "/image-7.jpg",
-    urlGithub: "https://github.com/MarlonDT24",
-    urlDemo: "#!",
-    category: "Fullstack",
-    description:
-      "SaaS de generación de contenido con IA en modo oscuro profundo.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
-    strategies: [
-      {
-        title: "Seguridad",
-        description: "Implementación de JWT y roles de usuario protegidos.",
-      },
-      {
-        title: "Base de Datos",
-        description: "Modelado relacional optimizado para consultas complejas.",
-      },
-      {
-        title: "Escalabilidad",
-        description: "Arquitectura modular lista para añadir microservicios.",
-      },
-    ],
-    techStack: [
-      { name: "Next.js", icon: <SiNextdotjs /> },
-      { name: "OpenAI", icon: <SiNodedotjs /> },
     ],
   },
 ];
