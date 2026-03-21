@@ -65,6 +65,7 @@ import {
   SiReactquery,
   SiJunit5,
   SiDocker,
+  SiSwiper,
 } from "react-icons/si";
 import { FaAws, FaJava, FaVuejs } from "react-icons/fa";
 import { BiLogoSpringBoot } from "react-icons/bi";
@@ -379,7 +380,9 @@ export const dataPortfolio = [
     ],
     techStack: [
       { name: "Next.js 15", icon: <SiNextdotjs size={18} /> },
+      { name: "React", icon: <SiReact size={18} /> },
       { name: "TypeScript", icon: <SiTypescript size={18} /> },
+      { name: "JavaScript", icon: <SiJavascript size={18} /> },
       { name: "tRPC", icon: <SiTrpc size={18} /> },
       { name: "TanStack", icon: <SiReactquery size={18} /> },
       { name: "Shadcn UI", icon: <SiShadcnui size={18} /> },
@@ -429,6 +432,7 @@ export const dataPortfolio = [
       { name: "PHP", icon: <SiPhp size={22} /> },
       { name: "MySQL", icon: <SiMysql size={22} /> },
       { name: "JavaScript", icon: <SiJavascript size={22} /> },
+      { name: "Bootstrap", icon: <SiBootstrap size={22} /> },
     ],
   },
   {
@@ -547,13 +551,36 @@ export const dataPortfolio = [
   {
     id: 4,
     title: "LabBurger Management",
-    image: "/image-4.jpg",
+    image: "/portfolio/labburger/labburger-collage.png",
     urlGithub: "https://github.com/MarlonDT24/labburger",
     urlDemo: "#!",
     category: "Fullstack",
     description:
-      "Plataforma integral de gestión de restauración con configurador de producto interactivo y panel de administración MVC.",
-    imagesGallery: ["/image-2.jpg", "/image-4.jpg", "/image-6.jpg"],
+      "Plataforma web full-stack desarrollada para un restaurante de comidas rápidas. Cuenta con una landing page completamente animada con GSAP y Swiper, donde los usuarios pueden explorar la carta, leer reseñas, hacer reservas, realizar pedidos y crear la hamburguesa del més. Incluye un sistema de autenticación con registro e inicio de sesión, y un área de gestión interna para administrar productos, pedidos y reservas.",
+    imagesGallery: [
+      "/portfolio/labburger/labburger-intro.png",
+      "/portfolio/labburger/labburger-intro-2.png",
+      "/portfolio/labburger/labburger-intro-3.png",
+      "/portfolio/labburger/labburger-intro-3.png",
+      "/portfolio/labburger/labburger-register.png",
+      "/portfolio/labburger/labburger-login.png",
+      "/portfolio/labburger/labburger-menu.png",
+      "/portfolio/labburger/labburger-menu-2.png",
+      "/portfolio/labburger/labburger-us.png",
+      "/portfolio/labburger/labburger-us-2.png",
+      "/portfolio/labburger/labburger-us-3.png",
+      "/portfolio/labburger/labburger-blog.png",
+      "/portfolio/labburger/labburger-creation.png",
+      "/portfolio/labburger/labburger-creation-2.png",
+      "/portfolio/labburger/labburger-order.png",
+      "/portfolio/labburger/labburger-order-2.png",
+      "/portfolio/labburger/labburger-order-3.png",
+      "/portfolio/labburger/labburger-orders.png",
+      "/portfolio/labburger/labburger-table.png",
+      "/portfolio/labburger/labburger-table-2.png",
+      "/portfolio/labburger/labburger-tables.png",
+      "/portfolio/labburger/labburger-profile.png",
+    ],
     strategies: [
       {
         title: "Interactive Builder",
@@ -574,8 +601,11 @@ export const dataPortfolio = [
     techStack: [
       { name: "Laravel", icon: <SiLaravel size={18} /> },
       { name: "PHP", icon: <SiPhp size={18} /> },
-      { name: "GSAP", icon: <SiGreensock size={18} /> },
       { name: "MySQL", icon: <SiMysql size={18} /> },
+      { name: "Tailwind", icon: <SiTailwindcss /> },
+      { name: "Vite", icon: <SiVite size={18} /> },
+      { name: "GSAP", icon: <SiGreensock size={18} /> },
+      { name: "Swiper", icon: <SiSwiper size={18} /> },
     ],
   },
 ];
