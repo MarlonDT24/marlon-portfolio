@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.fontpair.co)"
+      "WebFetch(domain:www.fontpair.co)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: add two-column layout to about-me page with BentoSkills\n\n- Created new BentoSkills component for technical competencies\n- Restructured page with 7/5 column grid layout\n- Added sticky skills section on larger screens\n- Updated section headers with secondary color accents\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "mcp__filesystem__read_text_file",
+      "mcp__filesystem__read_multiple_files",
+      "mcp__filesystem__directory_tree",
+      "mcp__filesystem__list_directory"
     ]
   }
 }
