@@ -10,12 +10,12 @@ export default function CvSelector({ isMobile = false }: CvSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [showPdf, setShowPdf] = useState(false);
 
-  const cvUrl = "/CV_Marlon_2026.pdf"; 
+  const cvUrl = "/CV_Marlon_Original.pdf"; 
 
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = "CV_Marlon_Torres.pdf";
+    link.download = "CV_Marlon_Original.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
